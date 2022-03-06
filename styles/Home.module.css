@@ -1,5 +1,13 @@
 .container {
   padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;  
+  background-color: cadetblue;
+  margin: 0;
+  padding: 0;
 }
 
 .main {
