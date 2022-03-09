@@ -13,7 +13,7 @@ export default function Velha(props) {
         props.onChange(velha.jogar(id));      
       setMarcador(velha.marcadores ? "X" : "O");
       setMarcado(true);
-    }    
+    }  
   };
 
   return (

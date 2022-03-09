@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Linha from "../components/Linha";
 import Velha from "../components/Velha";
@@ -8,10 +9,8 @@ export default function Home() {
   const [velha, setVelha] = useState<VelhaModel>(new VelhaModel());
 
   useEffect(() => {
-    if (velha.vencedor) {
-      console.log("vencedor: ", velha);
-    }
-  }, [velha.vencedor, velha.jogador]);
+    //setVelha(new VelhaModel());
+  }, [velha.vencedor]);
 
   return (
     <>
@@ -20,12 +19,18 @@ export default function Home() {
       </div>
 
       <div className={styles.main}>
-        
-        <div className="">
+        <div className={styles.vencedor}>
           {velha.vencedor ? (
-            <h1>O jogador: {velha.jogador} venceu.</h1>
+            <>
+              <h1 style={{ color: "#008000" }}>{velha.jogador} venceu.</h1>
+              <h2>
+                <Link href="/" passHref>
+                  <a>De novo?</a>
+                </Link>
+              </h2>
+            </>
           ) : (
-            <h1>Esta dando velha!</h1>
+            <h1>Por enquanto esta dando velha!</h1>
           )}
         </div>
 
