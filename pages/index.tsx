@@ -22,12 +22,7 @@ export default function Home() {
         <div className={styles.vencedor}>
           {velha.vencedor ? (
             <>
-              <h1 style={{ color: "#008000" }}>{velha.jogador} venceu.</h1>
-              <h2>
-                <Link href="/" passHref>
-                  <a>De novo?</a>
-                </Link>
-              </h2>
+              <h1 style={{ color: "#008000" }}>{velha.jogador} venceu.</h1>              
             </>
           ) : (
             <h1>Por enquanto esta dando velha!</h1>
